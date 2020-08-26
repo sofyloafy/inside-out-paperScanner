@@ -4,20 +4,27 @@ class PaperScanner {
     let result = []
     let splitInts = score.split(" ")
     let operator = splitInts[1]
-    splitInts.splice(1,1)
+    let ints = []
     let total = 0
-    if (splitInts.length > 1) {
+    splitInts.forEach(e => {
+      if (isNaN(e)){
+        operator = e
+      } else {
+        ints.push(e)
+      }
+    })
+    if (ints.length > 1) {
       if (operator == '+') {
-        total = splitInts.reduce((a, b) => (parseInt(a, 10) + parseInt(b, 10)))
+        total = ints.reduce((a, b) => (parseInt(a, 10) + parseInt(b, 10)))
       } else if (operator == '*') {
-        total = splitInts.reduce((a, b) => (parseInt(a, 10) * parseInt(b, 10)))
-      } else if (operator == '-') {
+        total = ints.reduce((a, b) => (parseInt(a, 10) * parseInt(b, 10)))
+      } else if (ints == '-') {
         total = splitInts.reduce((a, b) => (parseInt(a, 10) - parseInt(b, 10)))
-      } else if (operator == '%') {
+      } else if (ints == '%') {
         total = splitInts.reduce((a, b) => (parseInt(a, 10) % parseInt(b, 10)))
       }
     } else {
-      total = parseInt(splitInts[0],10)
+      total = parseInt(ints[0],10)
     }
     result.push(score, total)
     return result
