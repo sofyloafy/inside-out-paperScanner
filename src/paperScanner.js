@@ -7,7 +7,12 @@ class PaperScanner {
     splitInts.splice(1,1)
     let total = 0
     if (splitInts.length > 1) {
-      total = splitInts.reduce((a, b) => (parseInt(a, 10) + parseInt(b, 10)))
+      if (operator == '+') {
+        total = splitInts.reduce((a, b) => (parseInt(a, 10) + parseInt(b, 10)))
+      } else if (operator == '*') {
+        total = splitInts.reduce((a, b) => (parseInt(a, 10) * parseInt(b, 10)))
+      }
+      
     } else {
       total = parseInt(splitInts[0],10)
     }
