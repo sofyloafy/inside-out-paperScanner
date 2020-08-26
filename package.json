@@ -1,0 +1,19 @@
+{
+  "name": "inside-out-paperscanner",
+  "version": "1.0.0",
+  "description": "A simple kata demonstrating inside-out TDD style",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sofyloafy/inside-out-paperScanner.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sofyloafy/inside-out-paperScanner/issues"
+  },
+  "homepage": "https://github.com/sofyloafy/inside-out-paperScanner#readme"
+}
