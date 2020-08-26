@@ -6,7 +6,11 @@ describe('#PaperScanner', () => {
     expect(paperScanner.calculate("1")).toEqual(["1", 1])
   })
 
-  test('it should return 1 as string and int', () => {
+  test('it should return 2 as string and int', () => {
     expect(paperScanner.calculate("2")).toEqual(["2", 2])
+  })
+
+  test('it should return 2 ints as string and result', () => {
+    expect(paperScanner.calculate("1 + 1")).toEqual(["1 + 1", 2])
   })
 })
