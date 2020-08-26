@@ -11,6 +11,8 @@ class PaperScanner {
         total = splitInts.reduce((a, b) => (parseInt(a, 10) + parseInt(b, 10)))
       } else if (operator == '*') {
         total = splitInts.reduce((a, b) => (parseInt(a, 10) * parseInt(b, 10)))
+      } else if (operator == '-') {
+        total = splitInts.reduce((a, b) => (parseInt(a, 10) - parseInt(b, 10)))
       }
       
     } else {

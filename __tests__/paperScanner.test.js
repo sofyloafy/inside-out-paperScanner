@@ -17,4 +17,8 @@ describe('#PaperScanner', () => {
   test('it should return 2 ints as string and result', () => {
     expect(paperScanner.calculate("1 * 1")).toEqual(["1 * 1", 1])
   })
+
+  test('it should return 2 ints as string and result', () => {
+    expect(paperScanner.calculate("1 - 1")).toEqual(["1 - 1", 0])
+  })
 })
