@@ -23,7 +23,7 @@ describe('#PaperScanner', () => {
   })
 
   test('it should return 2 ints as string and result', () => {
-    expect(paperScanner.calculate("9 % 3")).toEqual(["9 % 3", 0])
+    expect(paperScanner.calculate("9 / 3")).toEqual(["9 / 3", 3])
   })
 
   test('it should return 3 ints as string and result', () => {
@@ -32,5 +32,9 @@ describe('#PaperScanner', () => {
 
   test('it should return 3 ints as string and result', () => {
     expect(paperScanner.calculate("1 * 1 * 1")).toEqual(["1 * 1 * 1", 1])
+  })
+
+  test('it should return 3 ints as string and result', () => {
+    expect(paperScanner.calculate("9 - 1 - 1")).toEqual(["9 - 1 - 1", 7])
   })
 })
